@@ -1,0 +1,28 @@
+git init
+git add index.html
+git commit -m "message"
+git push origin master
+git pull origin master
+
+git status
+git diff
+git log -p
+
+
+git bash
+$ git config --global user.name "Simran_Keswani"
+$ git config --global user.email "keswanisimran200897@gmail.com"
+
+
+
+mkdir mysite
+cd mysite
+           git init
+           git status
+           git add .
+           git commit
+           git remote add origin https://github.com/Simo0o08/mysite.git
+touch index.html
+git add index.html
+git commit -m "Create index.html" .
+           git push origin master
