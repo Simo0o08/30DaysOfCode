@@ -1,0 +1,40 @@
+DOM - Document object model
+How to interact with elements in HTML documents.
+Collection of Node.
+node- element of HTML
+
+
+list.innerHTML
+list.textContent
+document.querySelector("ul" || ".list");
+document.querySelectorAll("li");
+heading.className+="Ft";
+heading.classList.add("A");
+heading.classList.remove("B");
+
+btn.onclick=()=>{
+console.log("chal gya button onclick pr");
+};
+
+btn.onmouseover=()=>
+{
+heading.style.cssText="background-color:yelow;text:white";
+};
+
+btn.addEventListener("click",e=>{
+console.log(e);
+});
+
+listItem.parentNode.parentNode
+listItem.parentElement
+listItem.prevElementSibling
+list.chindNode
+list.children
+list.firstElementChild
+
+
+document.createElement("li");
+document.createTextNode("Blog");
+appendChild("");
+insertBefore("");
+removeChild("");
