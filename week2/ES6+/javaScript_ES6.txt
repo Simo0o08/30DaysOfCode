@@ -3,22 +3,52 @@ var, let and const keyword:
 -> Whereas when we declare variable with let keyword, it,'s scope is limited to a block in which it is declared. 
 -> const keyword has all the features of let but it is read only ie we can not reassign a variable declared with const keyword.
 
-Object.freeze() is used toprevent data Mutation.
+Object.freeze() is used to prevent data Mutation.
 
 Rest Operator is used to create a function that take variable number of arguments. It is denoted by 3 Dots(...)
 
 Spread Operator looks just like Rest Operator ie 3 Dots(...) but it is used to extend an already existing array or it spreads out an array into individual parts.
 
+---------------------------------------------------
+#filter and map function --->
+
+const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+
+const squareList = (arr) => {
+  const squaredIntegers = arr.filter(num => Number.isInteger(num) && num > 0).map(x => x * x);
+  return squaredIntegers;
+};
+
+
+const squaredIntegers = squareList(realNumberArray);
+console.log(squaredIntegers);
+
+
+------------------------------------------------
+
+#rest Operator
+
+
+const sum = (function() {
+  return function sum(...args) {
+    return args.reduce((a, b) => a + b, 0);
+  };
+})();
+console.log(sum(1, 2, 3, 4));
+
+
+-------------------------------------------------------------------------
+
 Destructing Assignment with the Rest Operator to reassign Array Elements
 const list = [1,2,3,4,5,6,7,8,9,10];
-const [ , , ...arr] = list;
+const [ , , ...arr] = list;   //remove 2 elements from array.
 console.log(arr); -output: [3, 4, 5, 6, 7, 8, 9, 10]
 const [ a, b, ...arr1] = list;
 console.log(a,b,arr1); -output: 1,2
-
+--------------------------------------------------------------------------
 We can import and export code from one file to another.
 demo.js file:
-export const name="aditi"
+export const name="SImmo"
 
 index.js file:
 import { name } from "./demo"  //importing name variable from demo 
